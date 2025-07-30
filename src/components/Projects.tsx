@@ -7,6 +7,15 @@ const Projects = () => {
   const projects = [
 
     {
+      title: "Portfolio ",
+      description: "I'm a passionate frontend developer with a strong foundation in modern web technologies. With experience in React.js, Node.js, and the complete JavaScript ecosystem, I love creating intuitive and performant user experiences.",
+      technologies: ["React", "Redux Saga", " Node.js", "express.js", "mongodb", " HTML5", "CSS3", "Next.js"],
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      liveUrl: "https://portfolio-five-sandy-27.vercel.app",
+      githubUrl: "#"
+    },
+
+    {
       title: "Chatbot ",
       description: "Designed campaign module UI to allow users to create and edit campaigns, manage schedules, and configure templates—cutting setup time and improving team efficiency. Developed a theme builder to apply reusable templates, cutting UI development time by 40–67% per module. Enhanced performance by enabling code splitting and lazy loading, improving initial load speed.",
       technologies: ["React", "Redux Saga", " Node.js", "express.js", "mongodb", " HTML5", "CSS3", "Next.js"],
@@ -14,7 +23,7 @@ const Projects = () => {
       liveUrl: "https://chatbot.marktine.com/",
       githubUrl: "#"
     },
-   {
+    {
       title: "Whatsapp Campaign ",
       description: "Designed end-to-end campaign tools, including a template editor and live preview—helping marketing teams configure and visualize campaigns in real time.",
       technologies: ["React", "Redux Saga", " Node.js", "express.js", "mongodb", " HTML5", "CSS3", "Next.js"],
@@ -44,9 +53,18 @@ const Projects = () => {
     {
       title: "Weather Dashboard",
       description: "A responsive weather application with location-based forecasts, interactive maps, and detailed weather analytics using modern APIs.",
-      technologies: ["React", "HTML5", "CSS3", "Weather API", "Chart.js"],
+      technologies: ["React", "HTML5", "CSS3", "Weather API", "Chart.js", "Typescript"],
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      liveUrl: "",
+      liveUrl: "https://weather-tan-two.vercel.app/",
+      githubUrl: "#"
+    },
+
+    {
+      title: "FullStack App",
+      description: "That is a solid modern MERN‑stack architecture with thoughtfully layered improvements like lazy loading, error handling, and state orchestration.",
+      technologies: ["Node.js with Express.j", "HTML5", "MongoDB", "CSS3", "React (with React Hooks)", "Tailwind CSS", " Material-UI", "Redux with Redux-Saga", "React Router DOM", "Lazy loading", "Suspense", "Error boundaries implemented"],
+      image: "https://plus.unsplash.com/premium_photo-1725985758251-b49c6b581d17?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      liveUrl: "https://testing-git-main-singh-4as-projects.vercel.app",
       githubUrl: "#"
     }
   ];

@@ -26,7 +26,9 @@ const Skills = () => {
     { skill: "CSS/HTML", level: 95 },
     { skill: "Node.js", level: 50 },
     { skill: "Redux", level: 80 },
-    { skill: "Express.js", level: 60 }
+    { skill: "Express.js", level: 60 },
+    { skill: "Bootstrap", level: 90 },
+    { skill: "Material ui", level: 90 },
   ];
 
   return (

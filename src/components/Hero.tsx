@@ -6,11 +6,11 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-primary opacity-5"></div>
-      
+
       {/* Floating Elements */}
       <div className="absolute top-20 left-20 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-32 h-32 bg-accent/10 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
-      
+      <div className="absolute bottom-20 right-20 w-32 h-32 bg-accent/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -19,45 +19,54 @@ const Hero = () => {
               Arjun Singh
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Frontend Developer crafting beautiful and performant web experiences
             with modern technologies
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="group animate-scale-in" style={{animationDelay: '0.2s'}}>
-              <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Get In Touch
+            <Button size="lg" className="group animate-scale-in" style={{ animationDelay: '0.2s' }}>
+              <a
+                href="mailto:singh1code@gmail.com"
+              >
+                <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+
+              </a>
+                Get In Touch
+
             </Button>
-            
-            <Button variant="outline" size="lg" className="group animate-scale-in" style={{animationDelay: '0.4s'}}>
+
+            <Button variant="outline" size="lg" className="group animate-scale-in" style={{ animationDelay: '0.4s' }}>
               <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               Download CV
             </Button>
           </div>
-          
-          <div className="flex justify-center space-x-6 animate-scale-in" style={{animationDelay: '0.6s'}}>
-            <a 
-              href="#" 
+
+          <div className="flex justify-center space-x-6 animate-scale-in" style={{ animationDelay: '0.6s' }}>
+            <a
+              target="_"
+              href="https://github.com/Singh-4A "
               className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-glow"
             >
               <Github className="h-6 w-6" />
             </a>
-            
-            <a 
-              href="#" 
+
+            <a
+              href="#"
               className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-glow"
             >
               <Linkedin className="h-6 w-6" />
             </a>
-            
-            <a 
-              href="#" 
+
+            <a
+              href="mailto:singh1code@gmail.com"
               className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-glow"
             >
               <Mail className="h-6 w-6" />
             </a>
+
+
           </div>
         </div>
       </div>
