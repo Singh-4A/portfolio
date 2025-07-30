@@ -6,9 +6,9 @@ interface payload {
     subject: string
 }
 export let clientApi = async (payload: payload) => {
-
     try {
-        const response = await axios("http://localhost:500/api/v1/client", {
+        const response = await axios({
+            url: `${process.env.API_END_POINT}client`,
             method: 'Post',
             data: payload
 

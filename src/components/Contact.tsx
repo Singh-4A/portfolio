@@ -69,6 +69,7 @@ const Contact = () => {
     e.preventDefault()
 
     if (clientValue?.email && clientValue?.name && clientValue?.subject && clientValue?.message) {
+
       const response = await clientApi(clientValue)
       if (response.status === 200) {
         setClientValue({
@@ -81,13 +82,14 @@ const Contact = () => {
         enqueueSnackbar('Thanks for connecting us!', { variant: 'success' });
 
 
-      } else {
-        enqueueSnackbar('Something went wrong!', { variant: 'error' });
+      } else if (response.status === 400) {
+        enqueueSnackbar('Email already exist', { variant: 'error' });
 
+      } else if (response.status === 500) {
+        enqueueSnackbar('Server Error!', { variant: 'error' });
       }
     } else {
       enqueueSnackbar('please fill the form!', { variant: 'error' });
-
     }
   }
 
