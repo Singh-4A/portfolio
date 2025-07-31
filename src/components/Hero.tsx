@@ -4,18 +4,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 const Hero = () => {
 
 
-  // Create and download a text file (or JSON, etc.)
-  const handleDownload = () => {
-    const content = ["First line", "Second line"];
-    const blob = new Blob([content.join("\n")], { type: "text/plain" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = './arjun.resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(link.href);
-  };
+
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -50,7 +39,7 @@ const Hero = () => {
                 Get In Touch
               </Button>
 
-              <a target="-" href="./arjun.resume.pdf" download="resume.pdf">
+              <a  href="./arjun.resume.pdf" download="resume.pdf">
                 <Button  variant="outline" size="lg" className="group animate-scale-in" style={{ animationDelay: '0.4s' }}>
                   <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                   Download CV
