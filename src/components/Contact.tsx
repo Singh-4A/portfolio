@@ -28,7 +28,9 @@ const Contact = () => {
 
   })
 
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  const [loading, setLoading] = useState("")
+
+  const { enqueueSnackbar } = useSnackbar();
 
   const contactInfo = [
     {
@@ -67,30 +69,44 @@ const Contact = () => {
 
   const submitClientData = async (e: any) => {
     e.preventDefault()
+    setLoading("loading")
 
-    if (clientValue?.email && clientValue?.name && clientValue?.subject && clientValue?.message) {
+    try {
+      if (clientValue?.email && clientValue?.name && clientValue?.subject && clientValue?.message) {
 
-      const response = await clientApi(clientValue)
-      if (response.status === 200) {
-        setClientValue({
-          name: "",
-          message: "",
-          subject: "",
-          email: ""
-        })
+        const response = await clientApi(clientValue)
+        if (response.status === 200) {
+          setClientValue({
+            name: "",
+            message: "",
+            subject: "",
+            email: ""
+          })
+          setLoading("")
+          enqueueSnackbar('Thank you for connecting us. We will get back to you shortly.', { variant: 'success' },);
 
-        enqueueSnackbar('Thanks for connecting us!', { variant: 'success' });
 
+        } else if (response.status === 400) {
+          enqueueSnackbar('Email already exist', { variant: 'error' });
+          setLoading("")
 
-      } else if (response.status === 400) {
-        enqueueSnackbar('Email already exist', { variant: 'error' });
+        } else if (response.status === 500) {
+          enqueueSnackbar('Server Error!', { variant: 'error' });
+          setLoading("")
+        } else if (response?.message === "Network Error") {
+          setLoading("")
 
-      } else if (response.status === 500) {
-        enqueueSnackbar('Server Error!', { variant: 'error' });
+          enqueueSnackbar(`${response?.message}!`, { variant: 'error' });
+        }
+      } else {
+        enqueueSnackbar('Please fill the form!', { variant: 'error' });
+        setLoading("")
       }
-    } else {
-      enqueueSnackbar('please fill the form!', { variant: 'error' });
+    } catch (error) {
+      setLoading("")
+      enqueueSnackbar('Something went wrong!', { variant: 'error' });
     }
+
   }
 
   return (
@@ -198,14 +214,30 @@ const Contact = () => {
                 />
               </div>
 
+
+
               <Button
                 type="submit"
                 size="lg"
                 className="w-full group"
                 onClick={(e) => submitClientData(e)}
+                disabled={loading === "loading"}
               >
-                <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                Send Message
+
+
+                {
+                  loading !== "loading" && <>
+                    <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    Send Message
+                  </>
+                }
+
+                {
+                  loading === "loading" &&
+                  <div className="flex items-center justify-center ">
+                    <div className="w-6 h-6 border-4 border-dashed rounded-full animate-spin border-white-500"></div>
+                  </div>
+                }
               </Button>
 
             </form>

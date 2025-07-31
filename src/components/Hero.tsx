@@ -2,6 +2,21 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
+
+
+  // Create and download a text file (or JSON, etc.)
+  const handleDownload = () => {
+    const content = ["First line", "Second line"];
+    const blob = new Blob([content.join("\n")], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = './arjun.resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(link.href);
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Gradient */}
@@ -21,27 +36,31 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Frontend Developer crafting beautiful and performant web experiences
-            with modern technologies
+            Full Stack Developer | React & Node.js | Building High‑Performance, Visual Web Experiences
+
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="group animate-scale-in" style={{ animationDelay: '0.2s' }}>
-              <a
-                href="mailto:singh1code@gmail.com"
-              >
+
+          <a
+            href="mailto:singh1code@gmail.com"
+          >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <Button size="lg" className="group animate-scale-in" style={{ animationDelay: '0.2s' }}>
                 <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-
-              </a>
                 Get In Touch
+              </Button>
 
-            </Button>
+              <a target="-" href="./arjun.resume.pdf" download="resume.pdf">
+                <Button  variant="outline" size="lg" className="group animate-scale-in" style={{ animationDelay: '0.4s' }}>
+                  <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Download CV
+                </Button>
+              </a>
 
-            <Button variant="outline" size="lg" className="group animate-scale-in" style={{ animationDelay: '0.4s' }}>
-              <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Download CV
-            </Button>
-          </div>
+
+            </div>
+          </a>
+
 
           <div className="flex justify-center space-x-6 animate-scale-in" style={{ animationDelay: '0.6s' }}>
             <a

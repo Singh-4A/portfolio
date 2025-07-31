@@ -20,7 +20,7 @@ const Projects = () => {
       description: "Designed campaign module UI to allow users to create and edit campaigns, manage schedules, and configure templates—cutting setup time and improving team efficiency. Developed a theme builder to apply reusable templates, cutting UI development time by 40–67% per module. Enhanced performance by enabling code splitting and lazy loading, improving initial load speed.",
       technologies: ["React", "Redux Saga", " Node.js", "express.js", "mongodb", " HTML5", "CSS3", "Next.js"],
       image: "https://plus.unsplash.com/premium_photo-1682023587356-86065925727a?q=80&w=784&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      liveUrl: "https://chatbot.marktine.com/",
+      liveUrl: "https://chatbot.marktine.com",
       githubUrl: "#"
     },
     {
@@ -28,7 +28,7 @@ const Projects = () => {
       description: "Designed end-to-end campaign tools, including a template editor and live preview—helping marketing teams configure and visualize campaigns in real time.",
       technologies: ["React", "Redux Saga", " Node.js", "express.js", "mongodb", " HTML5", "CSS3", "Next.js"],
       image: "https://images.unsplash.com/photo-1642724978334-218b27d2c472?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      liveUrl: " https://whatsapp.marktine.com/",
+      liveUrl: " https://whatsapp.marktine.com",
       githubUrl: "#"
     },
 
@@ -37,7 +37,7 @@ const Projects = () => {
       description: "Crafted a user‑friendly candidate portal, streamlining login and job application flows—allowing seamless account access and job submissions within minutes, improving onboarding and reducing drop‑off rates by ~30%.",
       technologies: ["React", "Css", "Html", "material ui", "Redux"],
       image: "https://plus.unsplash.com/premium_photo-1664476775076-0db9b0856bcb?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      liveUrl: "https://vriti.ai/",
+      liveUrl: "https://vriti.ai",
       githubUrl: "#"
     },
     {
