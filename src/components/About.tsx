@@ -28,14 +28,14 @@ const About = () => {
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Passionate FullStack with expertise in modern web technologies
+            Passionate React js with expertise in modern web technologies
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              I'm a passionate FullStack with a strong foundation in modern web technologies. 
+              I'm a passionate React js with a strong foundation in modern web technologies. 
               With experience in React.js, Node.js, and the complete JavaScript ecosystem, I love 
               creating intuitive and performant user experiences.
             </p>

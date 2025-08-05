@@ -11,7 +11,6 @@ export let clientApi = async (payload: payload) => {
             url: `${process.env.API_END_POINT}client`,
             method: 'Post',
             data: payload
-
         })
 
         return response
