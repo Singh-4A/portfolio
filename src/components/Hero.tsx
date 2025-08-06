@@ -25,7 +25,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            React js Developer | React & Node.js | Building High‑Performance, Visual Web Experiences
+            FullStack Developer | React & Node.js | Building High‑Performance, Visual Web Experiences
 
           </p>
 
@@ -39,8 +39,8 @@ const Hero = () => {
                 Get In Touch
               </Button>
 
-              <a  href="./arjun.resume.pdf" download="resume.pdf">
-                <Button  variant="outline" size="lg" className="group animate-scale-in" style={{ animationDelay: '0.4s' }}>
+              <a href="./arjun.resume.pdf" download="resume.pdf">
+                <Button variant="outline" size="lg" className="group animate-scale-in" style={{ animationDelay: '0.4s' }}>
                   <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                   Download CV
                 </Button>
