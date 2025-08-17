@@ -64,7 +64,7 @@ const Projects = () => {
       description: "That is a solid modern MERN‑stack architecture with thoughtfully layered improvements like lazy loading, error handling, and state orchestration.",
       technologies: ["Node.js with Express.j", "HTML5", "MongoDB", "CSS3", "React (with React Hooks)", "Tailwind CSS", " Material-UI", "Redux with Redux-Saga", "React Router DOM", "Lazy loading", "Suspense", "Error boundaries implemented"],
       image: "https://plus.unsplash.com/premium_photo-1725985758251-b49c6b581d17?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      liveUrl: "https://testing-git-main-singh-4as-projects.vercel.app",
+      liveUrl: "https://testing-singh-4as-projects.vercel.app/",
       githubUrl: "#"
     }
   ];
